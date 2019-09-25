@@ -5,9 +5,9 @@ docker run \
                 --rm \
                 -it \
                 -v "$(pwd)/work:/tmp/work" \
-                -v "$(pwd)/../shared/cache:/tmp/cache" \
+                -v "$(pwd)/cache:/tmp/cache" \
                 -v "$(pwd)/sources:/tmp/sources" \
-                -v "$(pwd)/../shared/downloads:/tmp/downloads" \
+                -v "$(pwd)/downloads:/tmp/downloads" \
                 yocto-roj-demokit \
                 --id="$(id -u):$(id -g)" \
                 --work="/tmp/work" \
