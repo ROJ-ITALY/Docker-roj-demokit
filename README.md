@@ -27,7 +27,7 @@ Read [here](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/u
      yocto-roj-demokit   latest              f4a0bbba9ee4        About an hour ago   805MB
      crops/poky          latest              83d19e76eadc        12 days ago         747MB
 #### Run docker container
-Before to run the docker container, we need to clone the Yocto Project for roj-demo-kit and create the output yocto directories:
+Before to run the docker container, you need to clone the Yocto Project for roj-demo-kit and create the output yocto directories:
 
      $ mkdir Yocto-roj-demokit
      $ cd Yocto-roj-demokit
