@@ -29,7 +29,7 @@ show_help()
         "${printer}" 'Container for building yocto'
         "${printer}"
         "${printer}" "Usage: ${0##*/}"
-        "${printer}" "  [-h*] [-l*=LOG PATH] [-s=SOURCE PATH]  "
+        "${printer}" "  [-h*] [-s=SOURCE PATH]  "
         "${printer}" "  [-i=UID:GID] [-d=DOWNLOAD PATH] [-w=WORK PATH] "
         "${printer}" "  [-c=CACHE PATH] <ACTION> "
         "${printer}"
