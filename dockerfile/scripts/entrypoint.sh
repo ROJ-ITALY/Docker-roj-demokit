@@ -163,5 +163,5 @@ check_args
         --workdir "${WORK_DIR}/.." \
         --uid="${ID%:*}" \
         --gid="${ID#*:}" \
-        '/usr/bin/poky-launch.sh '"$WORK_DIR" "$DOWNLOAD_DIR" "$SOURCE_DIR" "$CACHE_DIR" "${ACTION}"''
+        '''/usr/bin/poky-launch.sh '"$WORK_DIR" "$DOWNLOAD_DIR" "$SOURCE_DIR" "$CACHE_DIR" "${ACTION}"''
 
