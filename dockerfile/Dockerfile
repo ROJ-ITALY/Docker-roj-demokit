@@ -2,6 +2,7 @@ FROM crops/poky:latest
 
 COPY scripts/entrypoint.sh /
 COPY scripts/poky-launch.sh /usr/bin
+COPY scripts/usersetup.py /usr/bin/
 
 USER root
 
@@ -14,6 +15,8 @@ RUN apt-get update \
 
 RUN chmod 775 /usr/bin/poky-launch.sh && \
         rm /usr/bin/poky-entry.py
+
+RUN chmod 775 /usr/bin/usersetup.py
 
 USER usersetup
 
