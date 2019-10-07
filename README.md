@@ -10,13 +10,24 @@ This repository contains the sources of the docker image that can be used to bui
 
 
 ### Requirements
-Linux host PC with Docker CE installed.
-Read [here](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/) to install Docker on Ubuntu 64-bit. Other distro Linux are also supported.
+
+#### Docker CE
+Click [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/) to install Docker-CE on Ubuntu 64-bit. Other distro Linux are also supported.
+
+**Note:** Check [here](https://docs.docker.com/install/linux/linux-postinstall/) that your user (if not root) is in the docker group.
+
+#### Docker Compose
+On Ubuntu you can install Docker compose:
+
+     $ sudo apt-get update
+     $ sudo apt-get install docker-compose
+or Click [here](https://docs.docker.com/compose/install/) for an eventual particular version.
 
 
 ### Usage of repository
 #### Clone the repository
      $ git clone https://github.com/ROJ-ITALY/Docker-roj-demokit.git
+
 #### Build the docker image `yocto-roj-demokit`
      $ cd Docker-roj-demokit/
      $ ./build.sh
@@ -26,10 +37,12 @@ Read [here](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/u
      REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
      yocto-roj-demokit   latest              f4a0bbba9ee4        About an hour ago   805MB
      crops/poky          latest              83d19e76eadc        12 days ago         747MB
-#### Run docker container
-Before to run the docker container, you need to clone the Yocto Project for roj-demo-kit and create the output yocto directories:
 
-     $ mkdir Yocto-roj-demokit
+#### Run docker container
+Before runnig the docker container, you need to clone the Yocto Project for roj-demo-kit and create the output yocto directories:
+
+     $ cd ..
+	 $ mkdir Yocto-roj-demokit
      $ cd Yocto-roj-demokit
      $ git clone --recursive --branch morty https://github.com/ROJ-ITALY/sources.git sources
      $ mkdir work
@@ -67,7 +80,7 @@ At this point, you can run docker container; use the option -h to print the help
      Optional*
           -h --help         Show this help.
           
-  Below some examples to build u-boot, kernel and core-image-minimal in automatic and interactive mode.
+  Below some examples for building u-boot, kernel and core-image-minimal in automatic and interactive mode.
   1. Automatic mode:
   
     $ ./run_work.sh build uboot imx6qenuc_1gb     --> build u-boot for smarc quad with 1GB of RAM
