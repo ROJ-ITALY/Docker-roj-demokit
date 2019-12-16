@@ -44,7 +44,7 @@ Before runnig the docker container, you need to clone the Yocto Project for roj-
      $ cd ..
 	 $ mkdir Yocto-roj-demokit
      $ cd Yocto-roj-demokit
-     $ git clone --recursive --branch morty https://github.com/ROJ-ITALY/sources.git sources
+     $ git clone --recursive --branch thud https://github.com/ROJ-ITALY/sources.git sources
      $ mkdir work
      $ mkdir downloads
      $ mkdir cache
@@ -80,7 +80,7 @@ At this point, you can run docker container; use the option -h to print the help
      Optional*
           -h --help         Show this help.
           
-  Below some examples for building u-boot, kernel and core-image-minimal in automatic and interactive mode.
+  Below some examples for building u-boot, kernel and core-image-roj in automatic and interactive mode.
   1. Automatic mode:
   
     $ ./run_work.sh build uboot imx6qenuc_1gb     --> build u-boot for smarc quad with 1GB of RAM
@@ -91,6 +91,6 @@ At this point, you can run docker container; use the option -h to print the help
     $ ./run_work.sh run bash                      --> Init the yocto work dir and run the "bash"
     pokyuser@8dc0c5c9040a:/tmp/work$ bitbake --read=conf/imx6qenuc_1gb.conf u-boot-imx
     pokyuser@8dc0c5c9040a:/tmp/work$ bitbake --read=conf/imx6qenuc_1gb.conf linux-imx
-    pokyuser@8dc0c5c9040a:/tmp/work$ bitbake --read=conf/imx6qenuc_1gb.conf core-image-minimal
+    pokyuser@8dc0c5c9040a:/tmp/work$ bitbake --read=conf/imx6qenuc_1gb.conf core-image-roj
   
           
