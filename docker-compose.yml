@@ -4,5 +4,5 @@ services:
         build:
             context: dockerfile
             dockerfile: Dockerfile
-        image: yocto-roj-demokit:latest
+        image: yocto-roj-demokit:0.0.1
 

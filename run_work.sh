@@ -8,7 +8,7 @@ docker run \
                 -v "$(pwd)/cache:/tmp/cache" \
                 -v "$(pwd)/sources:/tmp/sources" \
                 -v "$(pwd)/downloads:/tmp/downloads" \
-                yocto-roj-demokit \
+                yocto-roj-demokit:0.0.1 \
                 --id="$(id -u):$(id -g)" \
                 --work="/tmp/work" \
                 --download="/tmp/downloads" \
