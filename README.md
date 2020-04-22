@@ -5,7 +5,7 @@
 * Paola Martiner <paola.martiner@roj.com>
 
 ## Description
-This repository contains the sources of the docker image that can be used to build yocto images for roj-demokit. Based on this repository, a docker image can be built, which can be used to build yocto images.
+This repository contains the sources of the docker image that can be used to build yocto images for roj-demokit. Based on this repository, a docker image can be downloaded (docker pull) or built.
 
 ## Requirements
 
